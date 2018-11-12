@@ -1,0 +1,38 @@
+--tbl_assets
+	id
+	serial_number
+	brand
+	model
+	category
+	description
+	po_number
+	date_purchased
+	vendor_id
+
+--tbl_computer
+	id
+	name
+	status
+
+--tbl_computer_details
+	id
+	computer_id
+	asset_id
+	date_installed
+	date_removed
+
+--tbl_office
+	id
+	name
+
+--tbl_device_assignment
+	id
+	department_id
+	device_id
+	user
+	date_assigned
+	date_pullout
+	
+
+
+	
