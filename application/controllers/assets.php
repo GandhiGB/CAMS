@@ -30,16 +30,14 @@ class Assets extends CI_Controller{
 
 		$this->load->model('asset_model');
 
-		$date = date('mdYhis', time());
-
 		$data = array(
-				'id'  => $date,	
+			
                 'po_number'  => $this->input->post('po_number'),
-                'serial_number'  => $this->input->post('serial_number'),
+                'serial_number'  => strtolower($this->input->post('serial_number')),
                 'category'  => $this->input->post('category'),
-                'brand'  => $this->input->post('brand'),
-                'model'  => $this->input->post('model'),
-                'description'  => $this->input->post('description'),
+                'brand'  => strtolower($this->input->post('brand')),
+                'model'  => strtolower($this->input->post('model')),
+                'description'  => strtolower($this->input->post('description')),
                 'date_acquired'  => $this->input->post('date_acquired'),
                 'cost'  => $this->input->post('cost'),
             );

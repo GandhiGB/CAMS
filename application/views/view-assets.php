@@ -36,17 +36,17 @@
 
 												foreach ($assets as $key => $value) {
 													echo '<tr>';
-														echo '<td style ="vertical-align:middle;text-align:center;">'.($key+1).'</td>';
-														echo '<td style ="vertical-align:middle;text-align:center;">'.strtoupper($value->id).'</td>';
-														echo '<td style ="vertical-align:middle;text-align:center;">'.strtoupper($value->po_number).'</td>';
-														echo '<td style ="vertical-align:middle;text-align:center;">'.strtoupper($value->serial_number).'</td>';
-														echo '<td style ="vertical-align:middle;text-align:center;">'.strtoupper($value->category).'</td>';
-														echo '<td style ="vertical-align:middle;text-align:center;">'.strtoupper($value->brand).'</td>';
-														echo '<td style ="vertical-align:middle;text-align:center;">'.strtoupper($value->model).'</td>';
-														echo '<td style ="vertical-align:middle;text-align:center;">'.strtoupper($value->description).'</td>';
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">'.($key+1).'</td>';
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">'.strtoupper($value->id).'</td>';
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">'.strtoupper($value->po_number).'</td>';
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">'.strtoupper($value->serial_number).'</td>';
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">'.strtoupper($value->category).'</td>';
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">'.strtoupper($value->brand).'</td>';
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">'.strtoupper($value->model).'</td>';
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">'.strtoupper($value->description).'</td>';
 														
 														
-														echo '<td style ="vertical-align:middle;text-align:center;">
+														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">
 																	
 																	<button class="btn-info" id="edit-asset" device-id="'.strtoupper($value->id).'" po-number="'.strtoupper($value->po_number).'" device-type="'.$value->category.'" data-toggle="modal" data-target="#modal-edit-asset" data-toggle="tooltip" title="Update this asset" id='.$value->id.'><i class="ace-icon fa fa-edit"></i></button>
 

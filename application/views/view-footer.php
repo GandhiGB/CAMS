@@ -284,7 +284,7 @@
 			        		brand:$('#brand').val(),
 			        		model:$('#model').val(),
 			        		description:$('#description').val(),
-			        		description:$('#date_acquired').val(),
+			        		date_acquired:$('#date_acquired').val(),
 			        		cost:$('#cost').val()
 			        	   },
 			        url: "<?php echo base_url(); ?>" + "assets/add",
