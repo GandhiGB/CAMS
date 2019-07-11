@@ -22,6 +22,7 @@ $id = $session_data['id'];
 		<link rel="stylesheet" href="<?php echo site_url();?>resources/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="<?php echo site_url();?>resources/font-awesome/4.5.0/css/font-awesome.min.css" />
 
+
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
@@ -35,6 +36,8 @@ $id = $session_data['id'];
 		<![endif]-->
 		<link rel="stylesheet" href="<?php echo site_url();?>resources/css/ace-skins.min.css" />
 		<link rel="stylesheet" href="<?php echo site_url();?>resources/css/ace-rtl.min.css" />
+
+
 
 		<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="resources/css/ace-ie.min.css" />
@@ -51,6 +54,13 @@ $id = $session_data['id'];
 		<script src="resources/js/html5shiv.min.js"></script>
 		<script src="resources/js/respond.min.js"></script>
 		<![endif]-->
+
+		<style type="text/css">
+			
+			.showcss{ display:block;}
+ 			.hidecss{ display:none;}
+
+		</style>
 	</head>
 
 	<body class="skin-1">
@@ -94,6 +104,7 @@ $id = $session_data['id'];
 			</div><!-- /.navbar-container -->
 		</div>
 
+
 		<div class="main-container ace-save-state" id="main-container">
 			<script type="text/javascript">
 				try{ace.settings.loadState('main-container')}catch(e){}
@@ -107,19 +118,19 @@ $id = $session_data['id'];
 				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 					
-						<button class="btn btn-success" data-toggle="modal" data-target="#modal-add-office" title="Add office">
-							<i class="ace-icon fa fa-plus-square"></i>
-						</button>
-
-						<button class="btn btn-info" title="No function">
+						<button class="btn btn-success" >
 							<i class="ace-icon fa fa-search"></i>
 						</button>
 
-						<button class="btn btn-warning" title="No function">
-							<i class="ace-icon fa fa-cog"></i>
+						<button class="btn btn-info" data-toggle="modal" data-target="#modal-add-computer" title="Add computer">
+							<i class="ace-icon fa fa-plus"></i>
 						</button>
 
-						<a class="ace-icon fa fa-power-off btn btn-danger" href="<?php echo site_url()?>logout"></a>
+						<button class="btn btn-warning" data-toggle="modal" data-target="#modal-add-asset" title="Add asset">
+							<i class="ace-icon fa fa-plus-square"></i>
+						</button>
+
+						<a class="ace-icon fa fa-power-off btn btn-danger" href="<?php echo site_url()?>logout" title="Logout bro!"></a>
 					</div>
 
 					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
@@ -135,118 +146,28 @@ $id = $session_data['id'];
 
 				<ul class="nav nav-list">
 
-
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-cog"></i>
+					<li class="small">
+						<a href="<?php echo base_url();?>assets">
+							<i class="menu-icon fa fa-tablet"></i>
 							<span class="menu-text"> Manage assets </span>
-
-							<b class="arrow fa fa-angle-down"></b>
 						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add asset
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									View assets
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Assign asset
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
 					</li>
 
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-cog"></i>
+					<li class="small">
+						<a href="<?php echo base_url();?>computer">
+							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text"> Manage computers </span>
-
-							<b class="arrow fa fa-angle-down"></b>
 						</a>
 
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add computer
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									View computers
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Assign computer
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
 					</li>
 
 
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-cog"></i>
+					<li class="small">
+						<a href="<?php echo base_url();?>office">
+							<i class="menu-icon fa fa-archive"></i>
 							<span class="menu-text"> Manage offices </span>
-
-							<b class="arrow fa fa-angle-down"></b>
 						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Add office
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									View offices
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-
-						</ul>
 					</li>
-
 
 				</ul>
 
@@ -266,3 +187,5 @@ $id = $session_data['id'];
 							</li>
 						</ul><!-- /.breadcrumb -->
 					</div>
+
+					

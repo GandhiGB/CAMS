@@ -1,15 +1,15 @@
 --tbl_assets
-	id
-	serial_number
+	*id
+	*po_number
+	*serial_number
+	*category
 	brand
 	model
-	category
 	description
-	po_number
 	date_purchased
 	vendor_id
 
---tbl_computer
+--tbl_computers
 	id
 	name
 	status
@@ -21,7 +21,7 @@
 	date_installed
 	date_removed
 
---tbl_office
+--tbl_offices
 	id
 	name
 
@@ -32,6 +32,11 @@
 	user
 	date_assigned
 	date_pullout
+
+--tgl_users
+	id
+	username
+	password
 	
 
 

@@ -1,43 +1,223 @@
+					<!--Modal adding asset-->
+					<div class="modal" id="modal-add-asset"  tabindex="-1" role="dialog" aria-hidden="true">
+					    <div class="modal-dialog">
+					      <div class="modal-content">
+					        <div class="modal-header">
+					          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					          <h4 class="modal-title" id="upload-avatar-title">Add asset</h4>
+					        </div>
+					        <div class="modal-body">
+					        	<div>
+					        		<label>PO No.</label>  
+			                        <input type="text" name="po_number" id="po_number" class="form-control" />  
+			                        <br />  
 
-			
-			<!--Modal adding office-->
-			<div class="modal" id="modal-add-office"  tabindex="-1" role="dialog" aria-hidden="true">
-			    <div class="modal-dialog">
-			      <div class="modal-content">
-			        <div class="modal-header">
-			          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			          <h4 class="modal-title" id="upload-avatar-title">Add office</h4>
-			        </div>
-			        <div class="modal-body">
-			        	<div>
-			        		<input type="submit" name="submit" id="add-office" value="add">
-			        	</div>
-			          
-			        </div>
-			      </div><!-- /.modal-content -->
-			    </div><!-- /.modal-dialog -->
-			</div>
+			                        <label>Serial No.</label>  
+			                        <input type="text" name="serial_number" id="serial_number" class="form-control" />  
+			                        <br /> 
+
+			                        <label>Device type</label>  
+			                        <select class="form-control" id="device_type">
+			                        	<option value="" disabled selected hidden>Select</option>
+			                        	<option value="access point">Access point</option>
+			                        	<option value="avr">AVR</option>
+			                        	<option value="casing">Casing</option>
+			                        	<option value="speaker">Computer speaker</option>
+			                        	<option value="external drive">External drive</option>
+			                        	<option value="hdd">HDD</option>
+			                        	<option value="cable">HDMI cable</option>
+			                        	<option value="keyboard">Keyboard</option>
+			                        	<option value="lancard">Lan card</option>
+			                        	<option value="laptop">Laptop</option>
+			                        	<option value="motherboard">Mother board</option>
+			                        	<option value="mouse">Mouse</option>
+			                        	<option value="monitor">Monitor</option>
+			                        	<option value="optical drive">Optical drive</option>
+			                        	<option value="power suppy">Power suppy</option>   
+			                        	<option value="printer">Printer</option>
+			                        	<option value="processor">Processor</option>
+			                        	<option value="ram">RAM</option>
+			                        	<option value="router">Router</option>
+			                        	<option value="switch">Switch</option>
+			                        	<option value="ups">UPS</option>
+			                        	<option value="usb">USB</option>
+			                        	<option value="cable">VGA cable</option>
+			                        	<option value="video card">Video card</option>
+			                        </select>  
+			                        <br />  
+
+			                        
+
+			                        <label>Brand</label>  
+			                        <input type="text" name="brand" id="brand" class="form-control" />  
+			                        <br />  
+
+			                        <label>Model</label>  
+			                        <input type="text" name="model" id="model" class="form-control" />  
+			                        <br /> 
+
+			                        <label>Description</label>  
+			                        <input type="text" name="description" id="description" class="form-control" />  
+			                        <br />
+
+			                        <label>Date aquired</label>  
+			                        <input type="date" name="date_acquired" id="date_acquired" class="form-control" />  
+			                        <br />
+
+			                        <label>Cost</label>  
+			                        <input type="text" name="cost" id="cost" class="form-control" />  
+			                        <br />
+ 
+			                        <input class="btn btn-success" type="submit" id="add-asset" name="submit" value="Save" />  
+					        	</div>
+					          
+					        </div>
+					      </div><!-- /.modal-content -->
+					    </div><!-- /.modal-dialog -->
+					</div>
+
+					 
+					<!--Modal adding office-->
+					<div class="modal" id="modal-add-office"  tabindex="-1" role="dialog" aria-hidden="true">
+					    <div class="modal-dialog">
+					      <div class="modal-content">
+					        <div class="modal-header">
+					          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					          <h4 class="modal-title" id="upload-avatar-title">Add office</h4>
+					        </div>
+					        <div class="modal-body">
+					        	<div>
+					        		<label>Office Name</label>  
+			                        <input type="text" name="name" id="name" class="form-control" />  
+			                        <br />  
+
+			                        <label>Description</label>  
+			                        <input type="text" name="description" id="description" class="form-control" />  
+			                        <br />  
+
+			                        <label>Department</label>  
+			                        <select class="form-control" id="department">
+			                        	<option value="" disabled selected hidden>Select</option>
+			                        	<option value="academic">Academic</option>
+			                        	<option value="administration">Administration</option>
+			                        </select>  
+			                        <br />  
+ 
+			                        <input class="btn btn-success" type="submit" name="submit" id="add-office" value="Submit" />  
+					        	</div>
+					          
+					        </div>
+					      </div><!-- /.modal-content -->
+					    </div><!-- /.modal-dialog -->
+					</div>
 
 
-			<!--Modal adding computer-->
-			<div class="modal" id="modal-add-computer"  tabindex="-1" role="dialog" aria-hidden="true">
-			    <div class="modal-dialog">
-			      <div class="modal-content">
-			        <div class="modal-header">
-			          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			          <h4 class="modal-title" id="upload-avatar-title">Add computer</h4>
-			        </div>
-			        <div class="modal-body">
-			          
-			        </div>
-			      </div><!-- /.modal-content -->
-			    </div><!-- /.modal-dialog -->
-			</div>
+					<!--Modal adding computer-->
+					<div class="modal" id="modal-add-computer"  tabindex="-1" role="dialog" aria-hidden="true">
+					    <div class="modal-dialog">
+					      <div class="modal-content">
+					        <div class="modal-header">
+					          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					          <h4 class="modal-title" id="upload-avatar-title">Add computer</h4>
+					        </div>
+					        <div class="modal-body">
+					        	<div>
+					        		<label>Computer Name</label>  
+			                        <input type="text" name="name" id="computer-name" class="form-control" />  
+			                        <br />   
+ 
+			                        <button class="btn btn-success" id="add-computer">Save</button>  
+					        	</div>
+					          
+					        </div>
+					      </div><!-- /.modal-content -->
+					    </div><!-- /.modal-dialog -->
+					</div>
+
+					<!--Modal edit asset-->
+					<div class="modal" id="modal-edit-asset"  tabindex="-1" role="dialog" aria-hidden="true">
+					    <div class="modal-dialog">
+					      <div class="modal-content">
+					        <div class="modal-header">
+					          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					          <h4 class="modal-title" id="upload-avatar-title">Edit asset</h4>
+					        </div>
+					        <div class="modal-body">
+					        	<div>
+
+					        		<label>Device ID.</label>  
+			                        <input type="text" name="device_id" id="device_id" class="form-control" disabled="true" />  
+			                        <br />  
+
+					        		<label>PO No.</label>  
+			                        <input type="text" name="po_number" id="po_number" class="form-control" />  
+			                        <br />  
+
+			                        <label>Device type</label>  
+			                        <select class="form-control" id="device_type">
+			                        	<option value="" disabled selected hidden>Select</option>
+			                        	<option id="access_point" value="access point">Access point</option>
+			                        	<option id="avr" value="avr">AVR</option>
+			                        	<option id="casing" value="casing">Casing</option>
+			                        	<option id="speaker" value="speaker">Computer speaker</option>
+			                        	<option id="external drive" value="external drive">External drive</option>
+			                        	<option id="hdd" value="hdd">HDD</option>
+			                        	<option id="cable" value="cable">HDMI cable</option>
+			                        	<option value="keyboard">Keyboard</option>
+			                        	<option value="lancard">Lan card</option>
+			                        	<option value="laptop">Laptop</option>
+			                        	<option value="motherboard">Mother board</option>
+			                        	<option value="mouse">Mouse</option>
+			                        	<option id="monitor" value="monitor">Monitor</option>
+			                        	<option value="optical drive">Optical drive</option>
+			                        	<option value="power suppy">Power suppy</option>   
+			                        	<option value="printer">Printer</option>
+			                        	<option value="processor">Processor</option>
+			                        	<option value="ram">RAM</option>
+			                        	<option value="router">Router</option>
+			                        	<option value="switch">Switch</option>
+			                        	<option value="ups">UPS</option>
+			                        	<option value="usb">USB</option>
+			                        	<option value="cable">VGA cable</option>
+			                        	<option value="video card">Video card</option>
+			                        </select>  
+			                        <br />  
+
+			                        <label>Serial No.</label>  
+			                        <input type="text" name="serial_number" id="serial_number" class="form-control" />  
+			                        <br /> 
+
+			                        <label>Brand</label>  
+			                        <input type="text" name="brand" id="brand" class="form-control" />  
+			                        <br />  
+
+			                        <label>Model</label>  
+			                        <input type="text" name="model" id="model" class="form-control" />  
+			                        <br /> 
+
+			                        <label>Description</label>  
+			                        <input type="text" name="description" id="description" class="form-control" />  
+			                        <br />
+
+			                        <label>Cost</label>  
+			                        <input type="text" name="cost" id="cost" class="form-control" />  
+			                        <br />
+
+ 									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+			                        <input class="btn btn-success" type="submit" name="submit" id="edit-asset" value="Save changes" />  
+					        	</div>
+					          
+					        </div>
+					      </div><!-- /.modal-content -->
+					    </div><!-- /.modal-dialog -->
+					</div>
+
+
+					
+					
 
 				</div>
 			</div><!-- /.main-content -->
-
-
 
 			<div class="footer">
 				<div class="footer-inner">
@@ -89,20 +269,36 @@
 		<script src="<?php echo site_url();?>resources/js/ace-elements.min.js"></script>
 		<script src="<?php echo site_url();?>resources/js/ace.min.js"></script>
 
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 		<script type="text/javascript">
-		$("#add-office").click(function() {
-		    $.ajax({
-		        type: "POST",
-		        url: "<?php echo base_url(); ?>" + "office/add",
-		        before: function(data){
-		        	alert("before");
-		        },
-		        success: function(data) {
-		            alert("sucess");
-		        }
-		    });
-		});
+
+			$("input#add-asset").click(function() {
+
+			    $.ajax({
+			        type: "POST",
+			        data: {	po_number:$('#po_number').val(),
+			        		serial_number:$('#serial_number').val(),
+			        		category:$('#device_type').val(),
+			        		brand:$('#brand').val(),
+			        		model:$('#model').val(),
+			        		description:$('#description').val(),
+			        		description:$('#date_acquired').val(),
+			        		cost:$('#cost').val()
+			        	   },
+			        url: "<?php echo base_url(); ?>" + "assets/add",
+			        success: function(data) {
+
+			        	$("#add-asset").val('Saving...');
+			        	var delay = 2000;
+						setTimeout(function() {
+						 	location.reload();
+						}, delay);
+			        }
+			    });
+			});
+
 		</script>
 		
 	</body>

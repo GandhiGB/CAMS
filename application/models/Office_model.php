@@ -4,7 +4,8 @@ class Office_model extends CI_Model {
   function get(){
 
     $this->db->select('*');
-    $q = $this->db->get('tbl_office');
+    $this->db->order_by('department', 'ASC');
+    $q = $this->db->get('tbl_offices');
 
     $data = [];
     if($q->num_rows() > 0) {
@@ -18,6 +19,13 @@ class Office_model extends CI_Model {
       return $data;
     }
 
+  }
+
+  function add($data){
+
+    $result = $this->db->insert('tbl_offices', $data);
+
+    return $result;
   }
 
 }

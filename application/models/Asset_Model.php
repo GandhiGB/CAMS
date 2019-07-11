@@ -1,10 +1,8 @@
 <?php
 class Asset_model extends CI_Model {
 
-  function get_asset($where){
+  function get(){
 
-
-    $this->db->where($where);
     $this->db->select('*');
     $q = $this->db->get('tbl_assets');
 
@@ -20,6 +18,34 @@ class Asset_model extends CI_Model {
       return $data;
     }
 
+  }
+
+  function add($data){
+
+    $result = $this->db->insert('tbl_assets', $data);
+
+    return $result;
+
+  }
+
+  function fetch_data($search_value){
+
+    $this->db->select("*");
+    $this->db->from("tbl_assets");
+
+    if($search_value != '') {
+
+      $this->db->like('id', $search_value, 'after');
+      $this->db->or_like('po_number', $search_value, 'after');
+      $this->db->or_like('serial_number', $search_value, 'after');
+      $this->db->or_like('model', $search_value, 'after');
+      $this->db->or_like('category', $search_value, 'after');
+      $this->db->or_like('brand', $search_value, 'after');
+      $this->db->or_like('description', $search_value, 'after');
+    }
+
+    $this->db->order_by('category', 'ASC');
+    return $this->db->get();
   }
 
 }
