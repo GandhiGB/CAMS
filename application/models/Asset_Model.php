@@ -21,11 +21,8 @@ class Asset_model extends CI_Model {
   }
 
   function add($data){
-
     $result = $this->db->insert('tbl_assets', $data);
-
     return $result;
-
   }
 
   function fetch_data($search_value){
@@ -47,6 +44,12 @@ class Asset_model extends CI_Model {
 
     $this->db->order_by('category', 'ASC');
     return $this->db->get();
+  }
+
+  function update($data){
+    $this->db->where('id', $data['id']);
+    $result = $this->db->update('tbl_assets', $data);
+    return $result;
   }
 
 }

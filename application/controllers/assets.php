@@ -32,14 +32,14 @@ class Assets extends CI_Controller{
 
 		$data = array(
 			
-                'po_number'  => $this->input->post('po_number'),
-                'serial_number'  => strtolower($this->input->post('serial_number')),
-                'category'  => $this->input->post('category'),
-                'brand'  => strtolower($this->input->post('brand')),
-                'model'  => strtolower($this->input->post('model')),
-                'description'  => strtolower($this->input->post('description')),
-                'date_acquired'  => $this->input->post('date_acquired'),
-                'cost'  => $this->input->post('cost'),
+                'po_number'  => strtoupper($this->input->post('po_number')),
+                'serial_number'  => strtoupper($this->input->post('serial_number')),
+                'category'  => strtoupper($this->input->post('category')),
+                'brand'  => strtoupper($this->input->post('brand')),
+                'model'  => strtoupper($this->input->post('model')),
+                'description'  => strtoupper($this->input->post('description')),
+                'date_acquired'  => strtoupper($this->input->post('date_acquired')),
+                'cost'  => strtoupper($this->input->post('cost')),
             );
 
 		$result = $this->asset_model->add($data);
@@ -73,18 +73,32 @@ class Assets extends CI_Controller{
 						<td style ="vertical-align:middle;">'.strtoupper($row->brand).'</td>
 						<td style ="vertical-align:middle;">'.strtoupper($row->model).'</td>
 						<td style ="vertical-align:middle;">'.strtoupper($row->description).'</td>
-						<td style ="vertical-align:middle;text-align:center;">
-							<button class="btn-success" data-toggle="modal" data-target="#modal-edit-assit" data-toggle="tooltip" title="Update this asset" id='.$row->id.'>
-								<i class="ace-icon fa fa-edit"></i>
-							</button>
-						</td>
+						<td style ="vertical-align:middle;">'.strtoupper($row->date_acquired).'</td>
+						<td style ="vertical-align:middle;">'.strtoupper($row->cost).'</td>
+						<td style ="width:auto;vertical-align:middle;text-align:center;">
+																	
+																	<button class="btn-info" id="edit-asset" 
+																	device-id="'.strtoupper($row->id).'" 
+																	po-number="'.strtoupper($row->po_number).'" 
+																	device-type="'.$row->category.'" 
+																	serial-number="'.$row->serial_number.'" 
+																	brand="'.$row->brand.'"
+																	model="'.$row->model.'" 
+																	description="'.$row->description.'"
+																	date-acquired="'.$row->date_acquired.'" 
+																	cost="'.$row->cost.'"   
+
+																	data-toggle="modal" data-target="#modal-edit-asset" data-toggle="tooltip" title="Update this asset" id='.$row->id.'><i class="ace-icon fa fa-edit"></i></button>
+
+
+																</td>
                   	</tr>';
 	      		}
 	    	}
 
 	    	else {
 	    		$output .= '<tr>
-	              <td class="center" colspan="9">No Data Found</td>
+	              <td class="center" colspan="11">No Data Found</td>
 	              </tr>';
 	    	}
   		}
@@ -92,11 +106,36 @@ class Assets extends CI_Controller{
   		else {
 
    	 		$output .= '<tr>
-              <td class="center" colspan="9">No Data Found</td>
+              <td class="center" colspan="11">No Data Found</td>
               </tr>';
   		}
 
   		echo $output;
 	}
+
+
+	function update(){
+
+		$this->load->model('asset_model');
+		
+
+		$data = array(
+				'id'  => strtoupper($this->input->post('id')),
+                'po_number'  => strtoupper($this->input->post('po_number')),
+                'serial_number'  => strtoupper($this->input->post('serial_number')),
+                'category'  => strtoupper($this->input->post('category')),
+                'brand'  => strtoupper($this->input->post('brand')),
+                'model'  => strtoupper($this->input->post('model')),
+                'description'  => strtoupper($this->input->post('description')),
+                'date_acquired'  => strtoupper($this->input->post('date_acquired')),
+                'cost'  => strtoupper($this->input->post('cost')),
+            );
+
+		$result = $this->asset_model->update($data);
+
+		echo $result;
+
+	}
+
 
 }

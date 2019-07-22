@@ -316,6 +316,34 @@
 
 			});
 
+			$("input#edit-asset").click(function() {
+
+			    $.ajax({
+			        type: "POST",
+			        data: {	
+			        		id:$('#e_device_id').val(),
+			        		po_number:$('#e_po_number').val(),
+			        		serial_number:$('#e_serial_number').val(),
+			        		category:$('#e_device_type').val(),
+			        		brand:$('#e_brand').val(),
+			        		model:$('#e_model').val(),
+			        		description:$('#e_description').val(),
+			        		date_acquired:$('#e_date_acquired').val(),
+			        		cost:$('#e_cost').val()
+			        	   },
+			        url: "<?php echo base_url(); ?>" + "assets/update",
+			        success: function(data) {
+
+			        	$("input#edit-asset").val('Saving...');
+			        	var delay = 2000;
+						setTimeout(function() {
+						 	location.reload();
+						}, delay);
+			        }
+			    });
+
+			});
+
 
 			function load_data(query = '') {
 				
@@ -340,15 +368,23 @@
 				var devicetype=$(opener).attr('device-type');
 				var serialnumber=$(opener).attr('serial-number');
 				var brand=$(opener).attr('brand');
+				var model=$(opener).attr('model');
+				var description=$(opener).attr('description');
+				var dateacquired=$(opener).attr('date-acquired');
+				var cost=$(opener).attr('cost');
 
 
 				//set what we got to our form
 				$('#e_device_id').val(deviceid);
 				$('#e_po_number').val(ponumber);
 				$('#e_device_type').val(devicetype);
-
 				$('#e_serial_number').val(serialnumber);
 				$('#e_brand').val(brand);
+				$('#e_model').val(brand);
+				$('#e_brand').val(brand);
+				$('#e_description').val(description);
+				$('#e_date_acquired').val(dateacquired);
+				$('#e_cost').val(cost);
 
 				if (devicetype == 'access point') {
 					$('#access_point').prop("selected", "selected");
