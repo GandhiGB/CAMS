@@ -76,6 +76,90 @@
 					    </div><!-- /.modal-dialog -->
 					</div>
 
+					<!--Modal edit asset-->
+					<div class="modal" id="modal-edit-asset"  tabindex="-1" role="dialog" aria-hidden="true">
+					    <div class="modal-dialog">
+					      <div class="modal-content">
+					        <div class="modal-header">
+					          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					          <h4 class="modal-title" id="upload-avatar-title">Edit asset</h4>
+					        </div>
+					        <div class="modal-body">
+					        	<div>
+
+					        		<label>Device ID.</label>  
+			                        <input type="text" name="device_id" id="e_device_id" class="form-control" disabled="true" />  
+			                        <br />  
+
+					        		<label>PO No.</label>  
+			                        <input type="text" name="po_number" id="e_po_number" class="form-control" />  
+			                        <br />  
+
+			                        <label>Device type</label>  
+			                        <select class="form-control" id="e_device_type">
+			                        	<option value="" disabled selected hidden>Select</option>
+			                        	<option id="access_point" value="access point">Access point</option>
+			                        	<option id="avr" value="avr">AVR</option>
+			                        	<option id="casing" value="casing">Casing</option>
+			                        	<option id="speaker" value="speaker">Computer speaker</option>
+			                        	<option id="external drive" value="external drive">External drive</option>
+			                        	<option id="hdd" value="hdd">HDD</option>
+			                        	<option id="cable" value="cable">HDMI cable</option>
+			                        	<option value="keyboard">Keyboard</option>
+			                        	<option value="lancard">Lan card</option>
+			                        	<option value="laptop">Laptop</option>
+			                        	<option value="motherboard">Mother board</option>
+			                        	<option value="mouse">Mouse</option>
+			                        	<option id="monitor" value="monitor">Monitor</option>
+			                        	<option value="optical drive">Optical drive</option>
+			                        	<option value="power suppy">Power suppy</option>   
+			                        	<option value="printer">Printer</option>
+			                        	<option value="processor">Processor</option>
+			                        	<option value="ram">RAM</option>
+			                        	<option value="router">Router</option>
+			                        	<option value="switch">Switch</option>
+			                        	<option value="ups">UPS</option>
+			                        	<option value="usb">USB</option>
+			                        	<option value="cable">VGA cable</option>
+			                        	<option value="video card">Video card</option>
+			                        </select>  
+			                        <br />  
+
+			                        <label>Serial No.</label>  
+			                        <input type="text" name="serial_number" id="e_serial_number" class="form-control" />  
+			                        <br /> 
+
+			                        <label>Brand</label>  
+			                        <input type="text" name="brand" id="e_brand" class="form-control" />  
+			                        <br />  
+
+			                        <label>Model</label>  
+			                        <input type="text" name="model" id="e_model" class="form-control" />  
+			                        <br /> 
+
+			                        <label>Description</label>  
+			                        <input type="text" name="description" id="e_description" class="form-control" />  
+			                        <br />
+
+			                        <label>Date aquired</label>  
+			                        <input type="date" name="date_acquired" id="e_date_acquired" class="form-control" />  
+			                        <br />
+
+			                        <label>Cost</label>  
+			                        <input type="text" name="cost" id="e_cost" class="form-control" />  
+			                        <br />
+
+ 									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+			                        <input class="btn btn-success" type="submit" name="submit" id="edit-asset" value="Save changes" />  
+					        	</div>
+					          
+					        </div>
+					      </div><!-- /.modal-content -->
+					    </div><!-- /.modal-dialog -->
+					</div>
+
+
+
 					 
 					<!--Modal adding office-->
 					<div class="modal" id="modal-add-office"  tabindex="-1" role="dialog" aria-hidden="true">
@@ -134,85 +218,7 @@
 					    </div><!-- /.modal-dialog -->
 					</div>
 
-					<!--Modal edit asset-->
-					<div class="modal" id="modal-edit-asset"  tabindex="-1" role="dialog" aria-hidden="true">
-					    <div class="modal-dialog">
-					      <div class="modal-content">
-					        <div class="modal-header">
-					          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					          <h4 class="modal-title" id="upload-avatar-title">Edit asset</h4>
-					        </div>
-					        <div class="modal-body">
-					        	<div>
-
-					        		<label>Device ID.</label>  
-			                        <input type="text" name="device_id" id="device_id" class="form-control" disabled="true" />  
-			                        <br />  
-
-					        		<label>PO No.</label>  
-			                        <input type="text" name="po_number" id="po_number" class="form-control" />  
-			                        <br />  
-
-			                        <label>Device type</label>  
-			                        <select class="form-control" id="device_type">
-			                        	<option value="" disabled selected hidden>Select</option>
-			                        	<option id="access_point" value="access point">Access point</option>
-			                        	<option id="avr" value="avr">AVR</option>
-			                        	<option id="casing" value="casing">Casing</option>
-			                        	<option id="speaker" value="speaker">Computer speaker</option>
-			                        	<option id="external drive" value="external drive">External drive</option>
-			                        	<option id="hdd" value="hdd">HDD</option>
-			                        	<option id="cable" value="cable">HDMI cable</option>
-			                        	<option value="keyboard">Keyboard</option>
-			                        	<option value="lancard">Lan card</option>
-			                        	<option value="laptop">Laptop</option>
-			                        	<option value="motherboard">Mother board</option>
-			                        	<option value="mouse">Mouse</option>
-			                        	<option id="monitor" value="monitor">Monitor</option>
-			                        	<option value="optical drive">Optical drive</option>
-			                        	<option value="power suppy">Power suppy</option>   
-			                        	<option value="printer">Printer</option>
-			                        	<option value="processor">Processor</option>
-			                        	<option value="ram">RAM</option>
-			                        	<option value="router">Router</option>
-			                        	<option value="switch">Switch</option>
-			                        	<option value="ups">UPS</option>
-			                        	<option value="usb">USB</option>
-			                        	<option value="cable">VGA cable</option>
-			                        	<option value="video card">Video card</option>
-			                        </select>  
-			                        <br />  
-
-			                        <label>Serial No.</label>  
-			                        <input type="text" name="serial_number" id="serial_number" class="form-control" />  
-			                        <br /> 
-
-			                        <label>Brand</label>  
-			                        <input type="text" name="brand" id="brand" class="form-control" />  
-			                        <br />  
-
-			                        <label>Model</label>  
-			                        <input type="text" name="model" id="model" class="form-control" />  
-			                        <br /> 
-
-			                        <label>Description</label>  
-			                        <input type="text" name="description" id="description" class="form-control" />  
-			                        <br />
-
-			                        <label>Cost</label>  
-			                        <input type="text" name="cost" id="cost" class="form-control" />  
-			                        <br />
-
- 									<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-			                        <input class="btn btn-success" type="submit" name="submit" id="edit-asset" value="Save changes" />  
-					        	</div>
-					          
-					        </div>
-					      </div><!-- /.modal-content -->
-					    </div><!-- /.modal-dialog -->
-					</div>
-
-
+					
 					
 					
 
@@ -297,6 +303,70 @@
 						}, delay);
 			        }
 			    });
+			});
+
+			$('#search_text').keypress(function(event) {
+	
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				
+				if(keycode == '13'){
+					var query = $(this).val();
+  					load_data(query);
+				}
+
+			});
+
+
+			function load_data(query = '') {
+				
+				$.ajax({
+			        type: "POST",
+			        data:{query:query},
+			        url: "<?php echo base_url(); ?>" + "assets/search",
+			        success: function(data) {
+			            $("#result").html(data);
+			        }
+			    });
+			}
+
+
+			$('#modal-edit-asset').on('show.bs.modal', function (e) {
+				// get information to update quickly to modal view as loading begins
+				var opener=e.relatedTarget;//this holds the element who called the modal
+				   
+				//we get details from attributes
+				var deviceid=$(opener).attr('device-id');
+				var ponumber=$(opener).attr('po-number');
+				var devicetype=$(opener).attr('device-type');
+				var serialnumber=$(opener).attr('serial-number');
+				var brand=$(opener).attr('brand');
+
+
+				//set what we got to our form
+				$('#e_device_id').val(deviceid);
+				$('#e_po_number').val(ponumber);
+				$('#e_device_type').val(devicetype);
+
+				$('#e_serial_number').val(serialnumber);
+				$('#e_brand').val(brand);
+
+				if (devicetype == 'access point') {
+					$('#access_point').prop("selected", "selected");
+				}
+
+				if (devicetype == 'avr') {
+					$('#avr').prop("selected", "selected");
+				}
+
+				if (devicetype == 'casing') {
+					$('#casing').prop("selected", "selected");
+				}
+
+				if (devicetype == 'monitor') {
+					$('#monitor').prop("selected", "selected");
+				}
+
+
 			});
 
 		</script>

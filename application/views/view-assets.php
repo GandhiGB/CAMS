@@ -48,7 +48,7 @@
 														
 														echo '<td style ="width:auto;vertical-align:middle;text-align:center;">
 																	
-																	<button class="btn-info" id="edit-asset" device-id="'.strtoupper($value->id).'" po-number="'.strtoupper($value->po_number).'" device-type="'.$value->category.'" data-toggle="modal" data-target="#modal-edit-asset" data-toggle="tooltip" title="Update this asset" id='.$value->id.'><i class="ace-icon fa fa-edit"></i></button>
+																	<button class="btn-info" id="edit-asset" device-id="'.strtoupper($value->id).'" po-number="'.strtoupper($value->po_number).'" device-type="'.$value->category.'" serial-number="'.$value->serial_number.'" data-toggle="modal" data-target="#modal-edit-asset" data-toggle="tooltip" title="Update this asset" id='.$value->id.'><i class="ace-icon fa fa-edit"></i></button>
 
 
 																</td>';

@@ -42,6 +42,7 @@ class Asset_model extends CI_Model {
       $this->db->or_like('category', $search_value, 'after');
       $this->db->or_like('brand', $search_value, 'after');
       $this->db->or_like('description', $search_value, 'after');
+      $this->db->or_like('date_acquired', $search_value, 'after');
     }
 
     $this->db->order_by('category', 'ASC');
