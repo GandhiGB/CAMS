@@ -6,8 +6,8 @@
 	brand
 	model
 	description
-	date_purchased
-	vendor_id
+	date_acquired
+	cost
 
 --tbl_computers
 	id
