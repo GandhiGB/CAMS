@@ -33,7 +33,7 @@ CREATE TABLE `tbl_assets` (
   `po_number` varchar(10) NOT NULL,
   `serial_number` varchar(20) NOT NULL,
   `model` varchar(20) NOT NULL,
-  `category` varchar(10) NOT NULL,
+  `category` varchar(20) NOT NULL,
   `brand` varchar(20) NOT NULL,
   `description` varchar(50) NOT NULL,
   `date_acquired` varchar(20) NOT NULL,

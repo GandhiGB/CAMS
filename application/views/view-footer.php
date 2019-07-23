@@ -98,30 +98,30 @@
 			                        <label>Device type</label>  
 			                        <select class="form-control" id="e_device_type">
 			                        	<option value="" disabled selected hidden>Select</option>
-			                        	<option id="access_point" value="access point">Access point</option>
+			                        	<option id="accesspoint" value="access point">Access point</option>
 			                        	<option id="avr" value="avr">AVR</option>
 			                        	<option id="casing" value="casing">Casing</option>
-			                        	<option id="speaker" value="speaker">Computer speaker</option>
-			                        	<option id="external drive" value="external drive">External drive</option>
+			                        	<option id="externaldrive" value="external drive">External drive</option>
 			                        	<option id="hdd" value="hdd">HDD</option>
 			                        	<option id="cable" value="cable">HDMI cable</option>
-			                        	<option value="keyboard">Keyboard</option>
-			                        	<option value="lancard">Lan card</option>
-			                        	<option value="laptop">Laptop</option>
-			                        	<option value="motherboard">Mother board</option>
-			                        	<option value="mouse">Mouse</option>
+			                        	<option id="keyboard" value="keyboard">Keyboard</option>
+			                        	<option id="lancard" value="lancard">Lan card</option>
+			                        	<option id="laptop" value="laptop">Laptop</option>
+			                        	<option id="motherboard" value="motherboard">Mother board</option>
+			                        	<option id="mouse" value="mouse">Mouse</option>
 			                        	<option id="monitor" value="monitor">Monitor</option>
-			                        	<option value="optical drive">Optical drive</option>
-			                        	<option value="power suppy">Power suppy</option>   
-			                        	<option value="printer">Printer</option>
-			                        	<option value="processor">Processor</option>
-			                        	<option value="ram">RAM</option>
-			                        	<option value="router">Router</option>
-			                        	<option value="switch">Switch</option>
-			                        	<option value="ups">UPS</option>
-			                        	<option value="usb">USB</option>
-			                        	<option value="cable">VGA cable</option>
-			                        	<option value="video card">Video card</option>
+			                        	<option id="opticaldrive" value="optical drive">Optical drive</option>
+			                        	<option id="powersupply" value="power suppy">Power suppy</option>   
+			                        	<option id="printer" value="printer">Printer</option>
+			                        	<option id="processor" value="processor">Processor</option>
+			                        	<option id="ram" value="ram">RAM</option>
+			                        	<option id="router" value="router">Router</option>
+			                        	<option id="speaker" value="speaker">Speaker</option>
+			                        	<option id="switch" value="switch">Switch</option>
+			                        	<option id="ups" value="ups">UPS</option>
+			                        	<option id="usb" value="usb">USB</option>
+			                        	<option id="cable" value="cable">VGA cable</option>
+			                        	<option id="videocard" value="video card">Video card</option>
 			                        </select>  
 			                        <br />  
 
@@ -386,19 +386,53 @@
 				$('#e_date_acquired').val(dateacquired);
 				$('#e_cost').val(cost);
 
-				if (devicetype == 'access point') {
-					$('#access_point').prop("selected", "selected");
+	// 			<option value="" disabled selected hidden>Select</option>
+    //         	<option id="accesspoint" value="access point">Access point</option>
+    //         	<option id="avr" value="avr">AVR</option>
+    //         	<option id="casing" value="casing">Casing</option>
+    //         	<option id="externaldrive" value="external drive">External drive</option>
+    //         	<option id="hdd" value="hdd">HDD</option>
+    //         	<option id="cable" value="cable">HDMI cable</option>
+    //         	<option id="keyboard" value="keyboard">Keyboard</option>
+    //         	<option id="lancard" value="lancard">Lan card</option>
+    //         	<option id="laptop" value="laptop">Laptop</option>
+    //         	<option id="motherboard" value="motherboard">Mother board</option>
+    //         	<option id="mouse" value="mouse">Mouse</option>
+    //         	<option id="monitor" value="monitor">Monitor</option>
+    //         	<option id="opticaldrive" value="optical drive">Optical drive</option>
+    //         	<option id="powersupply" value="power suppy">Power suppy</option>   
+    //         	<option id="printer" value="printer">Printer</option>
+    //         	<option id="processor" value="processor">Processor</option>
+    //         	<option id="ram" value="ram">RAM</option>
+    //         	<option id="router" value="router">Router</option>
+    //         	<option id="speaker" value="speaker">Speaker</option>
+    //         	<option id="switch" value="switch">Switch</option>
+    //         	<option id="ups" value="ups">UPS</option>
+    //         	<option id="usb" value="usb">USB</option>
+    //         	<option id="cable" value="cable">VGA cable</option>
+    //         	<option id="videocard" value="video card">Video card</option>
+
+				if (devicetype == 'ACCESS POINT') {
+					$('#accesspoint').prop("selected", "selected");
 				}
 
-				if (devicetype == 'avr') {
+				if (devicetype == 'AVR') {
 					$('#avr').prop("selected", "selected");
 				}
 
-				if (devicetype == 'casing') {
+				if (devicetype == 'CASING') {
 					$('#casing').prop("selected", "selected");
 				}
 
-				if (devicetype == 'monitor') {
+				if (devicetype == 'HDD') {
+					$('#hdd').prop("selected", "selected");
+				}
+
+				if (devicetype == 'EXTERNAL DRIVE') {
+					$('#externaldrive').prop("selected", "selected");
+				}
+
+				if (devicetype == 'MONITOR') {
 					$('#monitor').prop("selected", "selected");
 				}
 
